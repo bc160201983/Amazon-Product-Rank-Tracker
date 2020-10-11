@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request
 import os
 from .tasks import make_file,scrape
-bp = Blueprint("all", __name__)
+bp = Blueprint("all", __name__, template_folder='template')
 
 @bp.route("/", methods=['GET', 'POST'])
 def index():
